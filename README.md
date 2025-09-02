@@ -38,6 +38,7 @@ Requires **Python 3.8+**.
 
 ```bash
 pip install numpy pillow
+python to2dgs.py --input <image.png> [options]
 
 
 ⚙️ Arguments
@@ -73,3 +74,15 @@ pip install numpy pillow
 --z-ref (default: 2.0): Reference depth for scaling covariance
 
 --fog (default: 0.0): Depth fog strength (0 = none)
+
+📂 Output Files
+
+cloud_only_black.png → Rendered clouds on black background
+
+cloud_only_transparent.png → Transparent PNG (RGBA) for compositing
+
+mask.png → Binary segmentation mask of clouds
+
+gray_for_model.png → Grayscale fitting guide for model construction
+
+model.json → Gaussian splatting model with depth info
